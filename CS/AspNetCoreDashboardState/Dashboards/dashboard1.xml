@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="sqlDataSource1" DataProcessingMode="Client">
+      <Name>SalesPerson1</Name>
+      <Connection Name="sqliteConnection" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Sales Person">
+        <Parameter Name="countryQueryParameter" Type="DevExpress.DataAccess.Expression">(null)( [Parameters.countryParameter] )</Parameter>
+        <Tables>
+          <Table Name="SalesPerson" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="SalesPerson" />
+        </Columns>
+        <Filter>[SalesPerson.Country] = ?countryQueryParameter</Filter>
+      </Query>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="countryParameter" Value="UK" Description="Select a country:">
+      <StaticListLookUpSettings>
+        <Values>
+          <Value>UK</Value>
+          <Value>USA</Value>
+        </Values>
+      </StaticListLookUpSettings>
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="sqlDataSource1" DataMember="Sales Person">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="FullName" DefaultId="DataItem0" />
+        <Measure DataMember="ExtendedPrice" DefaultId="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Treemap ComponentName="treemapDashboardItem1" Name="Treemap 1" DataSource="sqlDataSource1" DataMember="Sales Person">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="ExtendedPrice" DefaultId="DataItem0" />
+        <Dimension DataMember="CategoryName" DefaultId="DataItem1" />
+        <Dimension DataMember="ProductName" DefaultId="DataItem2" />
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+    </Treemap>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="RangeFilter 1" DataSource="sqlDataSource1" DataMember="Sales Person">
+      <DataItems>
+        <Measure DataMember="ExtendedPrice" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+      </DataItems>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Weight="192.96019947967352">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="54.178195904814615" />
+        <LayoutGroup Orientation="Vertical" Weight="145.82180409518537">
+          <LayoutItem DashboardItem="treemapDashboardItem1" Weight="145.82180409518537" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutItem DashboardItem="rangeFilterDashboardItem1" Weight="52.861604615511851" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
