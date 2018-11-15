@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/AspNetCoreDashboardState/Controllers/HomeController.cs)
+* [_ViewImports.cshtml](./CS/AspNetCoreDashboardState/Views/_ViewImports.cshtml)
+* [Index.cshtml](./CS/AspNetCoreDashboardState/Views/Home/Index.cshtml)
+* [_Layout.cshtml](./CS/AspNetCoreDashboardState/Views/Shared/_Layout.cshtml)
+<!-- default file list end -->
 # ASP.NET Core Dashboard Control - How to specify a default dashboard state in code
 
 
