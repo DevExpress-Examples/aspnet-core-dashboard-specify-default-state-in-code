@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AspNetCoreDashboardState</title>
 
-    @Html.DevExpress().StyleSheets(styles => styles.AddDashboard(settings => settings.ColorScheme("light")))
-
-
+    <link href="~/css/site.min.css" rel="stylesheet" />
+    <script src="~/js/site.min.js"></script>
 </head>
 <body>
     @RenderBody()
-    @Html.DevExpress().Scripts()
 </body>
 </html>

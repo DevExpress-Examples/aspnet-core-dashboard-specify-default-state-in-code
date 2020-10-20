@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNetCoreDashboardState {
+namespace AspNetCoreDashboardState
+{
     public class Startup
     {
         public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment) {
@@ -28,7 +29,7 @@ namespace AspNetCoreDashboardState {
                     configurator.SetDataSourceStorage(CreateDataSourceStorage());
                     configurator.ConfigureDataConnection += Configurator_ConfigureDataConnection;
                 });
-            services.AddDevExpressControls(settings => settings.Resources = ResourcesType.ThirdParty | ResourcesType.DevExtreme);
+            services.AddDevExpressControls();
         }
 
         private void Configurator_ConfigureDataConnection(object sender, ConfigureDataConnectionWebEventArgs e) {

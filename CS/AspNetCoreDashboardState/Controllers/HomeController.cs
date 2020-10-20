@@ -18,8 +18,7 @@ namespace AspNetCoreDashboardState.Controllers {
             gridFilterState.MasterFilterValues.AddRange(new List<object[]>() {
                 new string[1] { "Andrew Fuller" },
                 new string[1] { "Laura Callahan" }
-            }
-            );
+            });
 
             DashboardItemState treemapDrilldownState = new DashboardItemState("treemapDashboardItem1");
             treemapDrilldownState.DrillDownValues.Add("Beverages");
