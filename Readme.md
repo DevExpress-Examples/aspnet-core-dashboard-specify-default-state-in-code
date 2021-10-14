@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 <!-- default file list -->
-*Files to look at*:
+## Files to Look At
 
 * [HomeController.cs](./CS/AspNetCoreDashboardState/Controllers/HomeController.cs)
 * [_ViewImports.cshtml](./CS/AspNetCoreDashboardState/Views/_ViewImports.cshtml)
