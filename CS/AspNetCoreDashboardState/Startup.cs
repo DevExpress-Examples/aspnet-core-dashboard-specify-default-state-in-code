@@ -75,7 +75,7 @@ namespace AspNetCoreDashboardState {
 
             app.UseEndpoints(endpoints => {
                 // Map dashboard routes.
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard", "DefaultDashboard");
+                endpoints.MapDashboardRoute("api/dashboard", "DefaultDashboard");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
