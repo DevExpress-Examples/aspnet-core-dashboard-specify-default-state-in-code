@@ -1,4 +1,4 @@
-﻿using AspNetCoreDashboardState.Models;
+using AspNetCoreDashboardState.Models;
 using DevExpress.DashboardCommon;
 using Microsoft.AspNetCore.Mvc;
 using System;

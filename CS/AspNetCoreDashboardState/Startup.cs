@@ -1,4 +1,4 @@
-﻿using DevExpress.AspNetCore;
+using DevExpress.AspNetCore;
 using DevExpress.DashboardAspNetCore;
 using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
