@@ -3,8 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T607138)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-
-# Dashboard for ASP.NET Core - How to specify a default dashboard state in code
+# BI Dashboard for ASP.NET Core - How to specify a default dashboard state in code
 
 The sample illustrates how to specify a <strong>dashboard state</strong> (such as <a href="">master filter</a> or parameter values) in code and how to apply this state when loading a dashboard for the first time. In this example, the <a href="https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardState">DashboardState</a> object defined in the controller holds the required dashboard state. The MVC approach is used to pass the specified dashboard state to the View's <a href="https://docs.devexpress.com/Dashboard/DevExpress.DashboardAspNetCore.DashboardBuilder.InitialDashboardState(System.String)">DashboardBuilder.InitialDashboardState</a> property and use this state on loading a dashboard.
 
